@@ -10,8 +10,8 @@ import (
 
 // Client is provide linebot api struct.
 type Client struct {
-	bot    *linebot.Client
-	logger *log.Logger
+	Bot    *linebot.Client
+	Logger *log.Logger
 }
 
 // NewClient is provide line-bot api struct client.
@@ -27,7 +27,7 @@ func NewClient() (*Client, error) {
 	logger := log.New(ioutil.Discard, "", log.LstdFlags)
 
 	return &Client{
-		bot:    bot,
-		logger: logger,
+		Bot:    bot,
+		Logger: logger,
 	}, nil
 }
